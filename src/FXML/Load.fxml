@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" fx:id="loadsHome" prefHeight="401.0" prefWidth="544.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.LoadsController">
+   <children>
+      <TabPane fx:id="tabPane" layoutX="17.0" layoutY="35.0" prefHeight="372.0" prefWidth="531.0" tabClosingPolicy="UNAVAILABLE">
+         <tabs>
+            <Tab text="Create Load">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <JFXTextField fx:id="tfPcustomer" focusColor="#242424" layoutY="23.0" promptText="Customer Name" />
+                        <JFXTextField fx:id="tfPaddress" focusColor="#242424" layoutY="50.0" promptText="Address" />
+                        <Label layoutX="14.0" layoutY="6.0" text="Pick up location" />
+                        <JFXTextField fx:id="tfPcity" focusColor="#242424" layoutY="83.0" maxWidth="90.0" minWidth="90.0" prefHeight="33.0" prefWidth="90.0" promptText="City" />
+                        <JFXTextField fx:id="tfPstate" focusColor="#242424" layoutX="84.0" layoutY="83.0" maxWidth="82.0" minWidth="81.0" prefHeight="33.0" prefWidth="82.0" promptText="St (ex. FL)" />
+                        <JFXTextField fx:id="tfPtime" focusColor="#242424" layoutX="1.0" layoutY="174.0" maxWidth="89.0" minWidth="89.0" prefHeight="33.0" prefWidth="89.0" promptText="Pick time" />
+                        <JFXTextField fx:id="loadNum" focusColor="#242424" layoutX="430.0" layoutY="23.0" maxWidth="130.0" minWidth="87.0" prefHeight="33.0" prefWidth="87.0" promptText="Load #" />
+                        <Label layoutX="434.0" layoutY="6.0" text="Load Number" />
+                        <JFXTextField fx:id="tfPEquip" focusColor="#242424" layoutY="207.0" promptText="Equipment type" />
+                        <JFXTextField fx:id="tfPweight" focusColor="#242424" layoutX="1.0" layoutY="241.0" promptText="Load Weight" />
+                        <JFXTextField fx:id="tfPprice" focusColor="#242424" layoutX="1.0" layoutY="274.0" promptText="Price" />
+                        <JFXTextField fx:id="tfDcustomer" focusColor="#242424" layoutX="205.0" layoutY="23.0" promptText="Customer Name" />
+                        <JFXTextField fx:id="tfDaddress" focusColor="#242424" layoutX="205.0" layoutY="50.0" promptText="Address" />
+                        <JFXTextField fx:id="tfDcity" focusColor="#242424" layoutX="205.0" layoutY="83.0" maxWidth="90.0" minWidth="90.0" prefHeight="33.0" prefWidth="90.0" promptText="City" />
+                        <JFXTextField fx:id="tfDstate" focusColor="#242424" layoutX="289.0" layoutY="83.0" maxWidth="82.0" minWidth="81.0" prefHeight="33.0" prefWidth="82.0" promptText="St (ex. FL)" />
+                        <Label layoutX="217.0" layoutY="6.0" text="Drop location" />
+                        <JFXTextField fx:id="tfDdriver" focusColor="#242424" layoutX="206.0" layoutY="143.0" promptText="Driver Name" />
+                        <JFXTextField fx:id="tfDCarrier" focusColor="#242424" layoutX="205.0" layoutY="174.0" promptText="Carrier Name" />
+                        <CheckBox fx:id="cbAssigned" layoutX="218.0" layoutY="231.0" mnemonicParsing="false" text="Assigned" />
+                        <CheckBox fx:id="cbDispatched" layoutX="217.0" layoutY="265.0" mnemonicParsing="false" text="Waiting to dispatch" />
+                        <JFXButton fx:id="btSubmitLoad" layoutX="217.0" layoutY="294.0" onAction="#submitLoad" prefHeight="27.0" prefWidth="157.0" style="-fx-background-color: CBDD76;" text="Submit Load" />
+                        <JFXTextField fx:id="tfPdate" focusColor="#242424" layoutX="1.0" layoutY="143.0" promptText="Pick up date" />
+                        <JFXTextField fx:id="tfPzip" focusColor="#242424" layoutY="110.0" promptText="Zip-code" />
+                        <JFXTextField fx:id="tfDzip" focusColor="#242424" layoutX="206.0" layoutY="110.0" promptText="Zip-code" />
+                        <JFXButton fx:id="searchLoad" layoutX="426.0" layoutY="53.0" onAction="#loadSearch" prefHeight="27.0" prefWidth="91.0" style="-fx-background-color: CBDD76;" text="Search" />
+                        <JFXButton fx:id="editLoad" layoutX="426.0" layoutY="86.0" onAction="#loadEdit" prefHeight="27.0" prefWidth="91.0" style="-fx-background-color: CBDD76;" text="Edit" />
+                        <JFXButton fx:id="saveLoad" layoutX="425.0" layoutY="119.0" onAction="#loadSave" prefHeight="27.0" prefWidth="91.0" style="-fx-background-color: CBDD76;" text="Update" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab fx:id="tabunassigned" text="Unassigned Loads">
+               <content>
+                  <AnchorPane fx:id="assignedTab" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <JFXTextArea fx:id="unassignedLoads" layoutX="10.0" layoutY="14.0" prefHeight="317.0" />
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+            <Tab fx:id="tabassigned" text="Assigned Loads">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <JFXTextArea fx:id="assignedLoads" layoutX="10.0" layoutY="7.0" prefHeight="338.0" />
+                        <JFXTextArea fx:id="assignedLoads" layoutX="10.0" layoutY="7.0" prefHeight="324.0" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+      <JFXButton fx:id="back" contentDisplay="RIGHT" layoutX="504.0" layoutY="7.0" onAction="#backAction" prefHeight="31.0" prefWidth="32.0" text=" ">
+         <graphic>
+            <ImageView fitHeight="24.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/X.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+   </children>
+</AnchorPane>

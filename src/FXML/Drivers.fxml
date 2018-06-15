@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="401.0" prefWidth="544.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.DriversController">
+   <children>
+      <AnchorPane id="AnchorPane" fx:id="customerAnchor" layoutX="10.0" layoutY="10.0" prefHeight="401.0" prefWidth="544.0">
+         <children>
+            <JFXTextField fx:id="driverId" focusColor="#242424" layoutX="413.0" layoutY="60.0" maxWidth="122.0" minWidth="120.0" prefHeight="33.0" prefWidth="122.0" />
+            <Label layoutX="414.0" layoutY="41.0" text="Driver Number" />
+            <JFXTextField fx:id="driverName" focusColor="#242424" layoutX="10.0" layoutY="33.0" promptText="Driver Name" />
+            <JFXTextField fx:id="driverCompany" focusColor="#242424" layoutX="10.0" layoutY="60.0" promptText="Driver Company" />
+            <JFXTextField fx:id="driverLicense" focusColor="#242424" layoutX="10.0" layoutY="137.0" promptText="Driver License #" />
+            <JFXTextField fx:id="contactPhone" focusColor="#242424" layoutX="10.0" layoutY="168.0" promptText="Phone number" />
+            <JFXTextField fx:id="mcNumber" focusColor="#242424" layoutX="10.0" layoutY="201.0" promptText="MC number" />
+            <JFXTextField fx:id="usdot" focusColor="#242424" layoutX="10.0" layoutY="233.0" promptText="USDOT number" />
+            <JFXTextArea fx:id="customersView" focusColor="#242424" layoutX="189.0" layoutY="145.0" maxWidth="361.0" minWidth="167.0" prefHeight="241.0" prefWidth="361.0" />
+            <Label layoutX="310.0" layoutY="128.0" text="Companies" />
+            <JFXButton fx:id="newDriver" layoutX="20.0" layoutY="266.0" onAction="#addDriver" style="-fx-background-color: CBDD76;" text="New Driver" />
+            <JFXButton fx:id="editDriver" layoutX="192.0" layoutY="36.0" onAction="#editDriver" prefHeight="27.0" prefWidth="109.0" style="-fx-background-color: CBDD76;" text="Edit Driver" />
+            <JFXButton fx:id="searchDriver" layoutX="472.0" layoutY="96.0" onAction="#searchDriver" style="-fx-background-color: CBDD76;" text="Search" />
+            <JFXButton fx:id="back" contentDisplay="RIGHT" layoutX="502.0" onAction="#backAction" prefHeight="31.0" prefWidth="32.0" text=" ">
+               <graphic>
+                  <ImageView fitHeight="24.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/X.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="saveDriver" layoutX="192.0" layoutY="77.0" onAction="#saveDriver" style="-fx-background-color: CBDD76;" text="Save" />
+            <JFXTextField fx:id="companyNumber" focusColor="#242424" layoutX="10.0" layoutY="93.0" promptText="Driver number" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

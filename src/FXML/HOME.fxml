@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" fx:id="homeAnchor" prefHeight="401.0" prefWidth="544.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.HomeController">
+   <children>
+      <JFXButton fx:id="btnLoads" contentDisplay="TOP" layoutX="61.0" layoutY="20.0" onAction="#loadsAction" prefHeight="154.0" prefWidth="201.0" text="Loads">
+         <graphic>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/loadsicon.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="btnDrivers" contentDisplay="TOP" layoutX="297.0" layoutY="23.0" onAction="#driversAction" prefHeight="154.0" prefWidth="201.0" text="Drivers">
+         <graphic>
+            <ImageView fitHeight="147.0" fitWidth="144.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/driversicon.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="btnCarriers" contentDisplay="TOP" layoutX="52.0" layoutY="227.0" onAction="#carriersAction" prefHeight="154.0" prefWidth="201.0" text="Carriers">
+         <graphic>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/freighticon.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="btnCustomers" contentDisplay="TOP" layoutX="297.0" layoutY="201.0" onAction="#customersAction" prefHeight="154.0" prefWidth="201.0" text="Customers">
+         <graphic>
+            <ImageView fitHeight="127.0" fitWidth="135.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/CustomersIcon.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+   </children>
+</AnchorPane>

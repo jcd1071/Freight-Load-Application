@@ -1,0 +1,6 @@
+.backbg{
+    
+    -fx-background-image:url("/Styles/background.jpg");
+    -fx-background-size: 100% 100%;
+    
+}

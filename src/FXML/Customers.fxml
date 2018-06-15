@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" fx:id="customerAnchor" prefHeight="401.0" prefWidth="544.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.CustomersController">
+   <children>
+      <JFXTextField fx:id="customerId" focusColor="#242424" layoutX="413.0" layoutY="60.0" maxWidth="122.0" minWidth="120.0" prefHeight="33.0" prefWidth="122.0" />
+      <Label layoutX="414.0" layoutY="41.0" text="Customer Number" />
+      <JFXTextField fx:id="customerName" focusColor="#242424" layoutX="10.0" layoutY="33.0" promptText="Customer Name" />
+      <JFXTextField fx:id="customerAddress" focusColor="#242424" layoutX="10.0" layoutY="60.0" promptText="Address" />
+      <JFXTextField fx:id="customerCity" focusColor="#242424" layoutX="10.0" layoutY="93.0" maxWidth="90.0" minWidth="90.0" prefHeight="33.0" prefWidth="90.0" promptText="City" />
+      <JFXTextField fx:id="customerState" focusColor="#242424" layoutX="94.0" layoutY="93.0" maxWidth="82.0" minWidth="81.0" prefHeight="33.0" prefWidth="82.0" promptText="St (ex. FL)" />
+      <JFXTextField fx:id="customerZip" focusColor="#242424" layoutX="10.0" layoutY="120.0" promptText="Zip-code" />
+      <JFXTextField fx:id="contactName" focusColor="#242424" layoutX="10.0" layoutY="147.0" promptText="Contact name" />
+      <JFXTextField fx:id="contactPhone" focusColor="#242424" layoutX="10.0" layoutY="180.0" promptText="Phone number" />
+      <JFXTextField fx:id="taxId" focusColor="#242424" layoutX="10.0" layoutY="213.0" promptText="Tax number" />
+      <JFXTextField fx:id="mcNumber" focusColor="#242424" layoutX="10.0" layoutY="246.0" promptText="MC number" />
+      <JFXTextField fx:id="usdot" focusColor="#242424" layoutX="11.0" layoutY="279.0" promptText="USDOT number" />
+      <JFXTextArea fx:id="customersView" focusColor="#242424" layoutX="193.0" layoutY="147.0" maxWidth="341.0" minWidth="335.0" prefHeight="241.0" prefWidth="341.0" />
+      <Label layoutX="193.0" layoutY="128.0" text="Previously viewed customers" />
+      <JFXButton fx:id="newCust" layoutX="193.0" layoutY="53.0" onAction="#addCustomer" style="-fx-background-color: CBDD76;" text="New Customer" />
+      <JFXButton fx:id="editCust" layoutX="193.0" layoutY="93.0" onAction="#editCustomer" prefHeight="27.0" prefWidth="109.0" style="-fx-background-color: CBDD76;" text="Edit Customer" />
+      <JFXButton fx:id="searchCust" layoutX="470.0" layoutY="93.0" onAction="#searchCustomer" style="-fx-background-color: CBDD76;" text="Search" />
+      <JFXButton fx:id="back" contentDisplay="RIGHT" layoutX="502.0" onAction="#backAction" prefHeight="31.0" prefWidth="32.0" text=" ">
+         <graphic>
+            <ImageView fitHeight="24.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/X.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="saveCustomer" layoutX="311.0" layoutY="93.0" onAction="#saveCust" style="-fx-background-color: CBDD76;" text="Save" />
+   </children>
+</AnchorPane>
