@@ -11,9 +11,9 @@ package DBConnection;
  */
 public class Configs {
     
-    protected static String dbhost = "localhost";
+    protected static String dbhost = "mydbinstance.cysu3z0vmbqr.us-east-1.rds.amazonaws.com";
     protected static String dbport = "3306";
-    protected static String dbuser = "root";
-    protected static String dbpass = "*********"; //apply passowrd to database on mysql workbench
-    protected static String dbname = "Freight";
+    protected static String dbuser = "dbFreight";
+    protected static String dbpass = "awsconnect";
+    protected static String dbname = "dbFreight";
 }
